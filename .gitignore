@@ -1,0 +1,40 @@
+# Xcode user-specific files
+xcuserdata/
+*.xcuserstate
+*.xccheckout
+*.moved-aside
+
+# Xcode build products
+build/
+DerivedData/
+*.pbxuser
+!default.pbxuser
+*.mode1v3
+!default.mode1v3
+*.mode2v3
+!default.mode2v3
+*.perspectivev3
+!default.perspectivev3
+
+# Swift Package Manager
+.build/
+.swiftpm/
+Packages/
+Package.resolved
+
+# CocoaPods (not used here, but included for safety)
+Pods/
+# Ignore standalone .xcworkspace files (e.g. CocoaPods-generated), but keep the one inside .xcodeproj
+/*.xcworkspace
+
+# macOS system files
+.DS_Store
+.AppleDouble
+.LSOverride
+._*
+
+# Thumbnails
+Thumbs.db
+
+# Claude Code IDE settings
+.claude/
