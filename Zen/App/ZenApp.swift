@@ -29,5 +29,6 @@ struct ZenApp: App {
         .modelContainer(container)
         .defaultSize(width: 1100, height: 780)
         .windowResizability(.contentMinSize)
+
     }
 }

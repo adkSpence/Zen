@@ -7,6 +7,7 @@ final class AppState {
     let streakVM = StreakViewModel()
     let chartVM = ChartViewModel()
     let notifications = NotificationService.shared
+    let menuBar = MenuBarManager()
 
     func setup(context: ModelContext, settings: TimerSettings) {
         timerVM.setup(context: context, settings: settings)
@@ -20,6 +21,8 @@ final class AppState {
         timerVM.onFocusSessionRecorded = { [weak self] in
             self?.evaluateStreak(context: context)
         }
+
+        menuBar.setup(appState: self, container: context.container)
     }
 
     func evaluateStreak(context: ModelContext) {
