@@ -151,24 +151,7 @@ final class TimerViewModel {
         pausedAt = nil
         accumulatedPauseDuration = 0
 
-        // Auto-start rules:
-        //   focus      ends → auto-start the break (short or long)
-        //   short break ends → auto-start focus
-        //   long break  ends → stay idle, let user decide when to re-focus
-        let autoStart: Bool
-        switch completingMode {
-        case .focus, .shortBreak: autoStart = true
-        case .longBreak:          autoStart = false
-        }
-
-        if autoStart {
-            sessionStartedAt    = .now
-            sessionRecordStart  = (nextMode == .focus) ? .now : nil
-            runState            = .running
-            scheduleNotification()
-        } else {
-            runState = .idle
-        }
+        runState = .idle
 
         runID = UUID()
     }
